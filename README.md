@@ -4,7 +4,7 @@
 To create a new Proxmox LXC container, run the following in the Proxmox web shell.
 
 ```
-bash -c "$(wget -qLO - https://github.com/tteck/proxmox_create_lxc/raw/master/create_container.sh)"
+bash -c "$(wget -qLO - https://github.com/tteck/proxmox_create_lxc_plus/raw/master/create_container.sh)"
 ```
 To update the list of devices (ports) that are shared with the LXC ID of 100 (change to your ID), run the following in the Proxmox web shell.
 
