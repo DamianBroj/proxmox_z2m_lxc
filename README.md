@@ -1,5 +1,5 @@
-# Proxmox LXC Container
-
+# Proxmox LXC Container Plus
+(curl. sudo, auto login)
 
 To create a new Proxmox LXC container, run the following in the Proxmox web shell.
 
