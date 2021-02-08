@@ -41,6 +41,16 @@ apt-get -qqy install \
     curl \
     sudo &>/dev/null
 
+# Customize Docker configuration
+# msg "Customizing Docker..."
+DOCKER_CONFIG_PATH='/etc/docker/daemon.json'
+mkdir -p $(dirname $DOCKER_CONFIG_PATH)
+cat >$DOCKER_CONFIG_PATH <<'EOF'
+{
+  "log-driver": "journald"
+}
+EOF
+
 # Customize container
 msg "Customizing container..."
 rm /etc/motd # Remove message of the day after login
