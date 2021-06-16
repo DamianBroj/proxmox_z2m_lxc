@@ -65,7 +65,7 @@ TEMP_DIR=$(mktemp -d)
 pushd $TEMP_DIR >/dev/null
 
 # Download setup script
-wget -qL https://github.com/tteck/proxmox_create_lxc_plus/raw/master/setup.sh
+wget -qL https://github.com/tteck/proxmox_z2m_lxc/raw/master/setup.sh
 
 # Detect modules and automatically load at boot
 load_module aufs
@@ -138,7 +138,7 @@ else
   mkfs.ext4 $(pvesm path $ROOTFS) &>/dev/null
 fi
 ARCH=$(dpkg --print-architecture)
-HOSTNAME=lxc
+HOSTNAME=zigbee2mqtt
 TEMPLATE_STRING="local:vztmpl/${TEMPLATE}"
 pct create $CTID $TEMPLATE_STRING -arch $ARCH -features nesting=1 \
   -hostname $HOSTNAME -net0 name=eth0,bridge=vmbr0,ip=dhcp -onboot 1 \
@@ -164,5 +164,5 @@ pct exec $CTID /setup.sh
 
 # Get network details and show completion message
 IP=$(pct exec $CTID ip a s dev eth0 | sed -n '/inet / s/\// /p' | awk '{print $2}')
-info "Successfully created a LXC Container to $CTID at IP Address ${IP}"
+info "Successfully created zigbee2mqtt LXC Container to $CTID at IP Address ${IP}"
 
