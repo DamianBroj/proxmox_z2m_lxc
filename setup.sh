@@ -41,7 +41,14 @@ apt-get -qqy install \
     curl \
     sudo \
     # Setup Node.js repository
-    sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - &>/dev/null
+    sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - \
+    # Install Node.js;
+    sudo apt-get install -y nodejs git make g++ gcc \
+    # Clone Zigbee2MQTT repository
+    sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt \
+    # Install dependencies (as user "pi")
+    cd /opt/zigbee2mqtt \
+    npm ci --production &>/dev/null
 
 # Customize Docker configuration
 # msg "Customizing Docker..."
