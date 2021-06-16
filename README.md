@@ -4,6 +4,7 @@
 (curl. sudo, auto login)
 
 To create a new Proxmox Zigbee2MQTT LXC Container, run the following steps in the Proxmox web shell.
+
 STEP 1
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/proxmox_z2m_lxc/raw/master/create_container.sh)"
