@@ -17,16 +17,14 @@ bash -c "$(wget -qLO - https://github.com/whiskerz007/proxmox_hassio_lxc/raw/mas
 ```
 Note: The changes will apply on the next start of the LXC.
 
-Ports can be tested by executing: test -w [PORT] && echo success || echo failure
-
-Example: (Run in the zigbee2mqtt console)
+STEP #3 Determine the location of your adapter (Run in the zigbee2mqtt console)
 ```
-test -w /dev/ttyACM0 && echo success || echo failure
+ls -l /dev/serial/by-id
 ```
-
 Next follow the instructions from the link below to complete the setup
 
 STEP #3 ( Run in your browser)
 ```
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configuring
 ```
+
