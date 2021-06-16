@@ -25,6 +25,8 @@ test -w /dev/ttyACM0 && echo success || echo failure
 ```
 
 Next follow the instructions from the link below to complete the setup
+
+STEP #3
 ```
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configuring
 ```
