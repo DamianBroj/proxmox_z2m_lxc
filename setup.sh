@@ -39,7 +39,9 @@ apt-get -qqy upgrade &>/dev/null
 msg "Installing prerequisites..."
 apt-get -qqy install \
     curl \
-    sudo &>/dev/null
+    sudo \
+    # Setup Node.js repository
+    sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - &>/dev/null
 
 # Customize Docker configuration
 # msg "Customizing Docker..."
