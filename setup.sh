@@ -39,15 +39,19 @@ apt-get -qqy upgrade &>/dev/null
 msg "Installing prerequisites..."
 apt-get -qqy install \
     curl \
-    sudo \
+    sudo &>/dev/null
     # Setup Node.js repository
-    sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - \
+    msg "Setup Node.js repository..."
+    sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - &>/dev/null
     # Install Node.js;
-    sudo apt-get install -y nodejs git make g++ gcc \
+    msg "Install Node.js..."
+    sudo apt-get install -y nodejs git make g++ gcc &>/dev/null
     # Clone Zigbee2MQTT repository
-    sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt \
-    # Install dependencies (as user "pi")
-    cd /opt/zigbee2mqtt \
+    msg "Clone Zigbee2MQTT repository..."
+    sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt &>/dev/null
+    # Install dependencies
+    msg "Install dependencies..."
+    cd /opt/zigbee2mqtt &>/dev/null
     npm ci --production &>/dev/null
 
 # Customize Docker configuration
