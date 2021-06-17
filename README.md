@@ -27,7 +27,7 @@ STEP #4 ( Run in your browser)
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configuring
 ```
 
-First 9 lines in my zigbee2mqtt config
+Example: First 9 lines in my zigbee2mqtt config
 ```
 frontend:
   port: 9442
