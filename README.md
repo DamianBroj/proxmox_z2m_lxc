@@ -42,6 +42,9 @@ mqtt:
   reject_unauthorized: true
   version: 4
 serial:
-  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0  
+  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+advanced:
+  pan_id: GENERATE
+  network_key: GENERATE  
   ```
   
