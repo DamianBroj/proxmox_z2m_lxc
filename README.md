@@ -29,7 +29,6 @@ https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configurin
 
 Example:
 ```
-
 frontend:
   port: 9442
 homeassistant: true
@@ -43,5 +42,6 @@ mqtt:
   reject_unauthorized: true
   version: 4
 serial:
-  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0  ```
+  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0  
+  ```
   
