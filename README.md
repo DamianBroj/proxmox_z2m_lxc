@@ -10,7 +10,7 @@ You must update the list of devices (ports) that are shared with the LXC ID of 1
 
 STEP #2 (Run in the Proxmox web shell)
 ```
-bash -c "$(wget -qLO - https://github.com/whiskerz007/proxmox_hassio_lxc/raw/master/set_autodev_hook.sh)" -s 100
+bash -c "$(wget -qLO - https://github.com/tteck/proxmox_z2m_lxc/raw/master/open_port.sh)" -s 100
 ```
 ## Note: The changes from step #2 will apply on the next start of the LXC.
 
