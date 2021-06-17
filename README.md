@@ -27,8 +27,9 @@ STEP #4 ( Run in your browser)
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configuring
 ```
 
-Example: First 9 lines in my zigbee2mqtt config
+Example:
 ```
+
 frontend:
   port: 9442
 homeassistant: true
@@ -36,7 +37,11 @@ permit_join: false
 mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://192.168.86.224:1883'
-  user: <usr>
-  password: <pwd>
-  ```
+  user: usr
+  password: pwd
+  keepalive: 60
+  reject_unauthorized: true
+  version: 4
+serial:
+  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0  ```
   
