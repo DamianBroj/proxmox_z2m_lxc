@@ -27,7 +27,7 @@ STEP #4 ( Run in your browser)
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html#3-configuring
 ```
 
-Example:
+Example: ```nano /opt/zigbee2mqtt/data/configuration.yaml```
 ```
 frontend:
   port: 9442
