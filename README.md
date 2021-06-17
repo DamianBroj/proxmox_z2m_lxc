@@ -18,6 +18,8 @@ STEP #3 Determine the location of your adapter (Run in the zigbee2mqtt console)
 ```
 ls -l /dev/serial/by-id
 ```
+Example: ```/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0```
+
 Next follow the instructions from the link below to complete the setup
 
 STEP #4 ( Run in your browser)
