@@ -12,7 +12,7 @@ STEP #2 (Run in the Proxmox web shell)
 ```
 bash -c "$(wget -qLO - https://github.com/tteck/proxmox_z2m_lxc/raw/master/open_port.sh)" -s 100
 ```
-## Note: The changes from step #2 will apply on the next start of the LXC.
+## Note: Restart the zigbee2mqtt LXC to apply changes before continuing.
 
 STEP #3 Determine the location of your adapter (Run in the zigbee2mqtt console)
 ```
